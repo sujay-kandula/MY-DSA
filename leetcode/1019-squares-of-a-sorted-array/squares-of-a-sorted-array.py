@@ -7,5 +7,4 @@ class Solution(object):
         new_num=[]
         for i in range(len(nums)):
             new_num.append(nums[i]*nums[i])
-        b=new_num.sort()
-        return new_num
+        return sorted(new_num)
