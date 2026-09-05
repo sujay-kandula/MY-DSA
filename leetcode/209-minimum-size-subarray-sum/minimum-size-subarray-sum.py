@@ -5,10 +5,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if target in nums:
-            return 1
-        if sum(nums)< target:
-            return 0
         left=0
         right=0
         sum1=0
@@ -22,5 +18,7 @@ class Solution(object):
                 if length<min_length:
                     min_length=length
             right+=1
+        if min_length==len(nums)+1:
+            return 0
         return min_length
             
