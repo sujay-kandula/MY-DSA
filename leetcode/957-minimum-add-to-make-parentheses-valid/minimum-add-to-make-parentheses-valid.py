@@ -4,21 +4,19 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        stack = []
-        count = 0
-
-        for ch in s:
-            if ch == "(":
-                stack.append(ch)
+        openc=0
+        closec=0
+        for char in s:
+            if char=='(':
+                openc+=1
+            elif openc>0:
+                openc-=1
             else:
-                if len(stack) == 0:
-                    count += 1
-                else:
-                    top = stack[-1]
-                    if ch == ")" and top == "(":
-                        stack.pop()
-
-        return count + len(stack)
+                closec+=1
+        
+            
+        
+        return closec+openc
 
 
 
