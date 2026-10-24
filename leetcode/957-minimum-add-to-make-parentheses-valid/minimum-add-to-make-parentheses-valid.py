@@ -13,9 +13,6 @@ class Solution(object):
                 openc-=1
             else:
                 closec+=1
-        
-            
-        
         return closec+openc
 
 
