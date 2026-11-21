@@ -6,7 +6,8 @@ class Solution(object):
         :rtype: int
         """
         n=len(needle)
-        for i in range(len(haystack)):
+        m=len(haystack)
+        for i in range(m):
             if haystack[i:i+n]==needle:
                 return i
         return -1
