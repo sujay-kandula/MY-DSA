@@ -5,7 +5,9 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-        return haystack.find(needle)
-
-
-        
+        m =len(haystack)
+        n=len(needle)
+        for i in range(m-n+1):
+            if haystack[i:i+n:]==needle:
+                    return i
+        return -1
